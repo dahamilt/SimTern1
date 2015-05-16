@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+		  <TextView
+		     android:id="@+id/CCLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Chief Complaint:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/ChiefComplaintTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size"
+		     android:layout_margin="3dp"
+		     android:padding = "2dp" />
+		
+		 <TextView
+		     android:id="@+id/HPILabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="History of Present Illness:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/HistoryOfPresentIllnessTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/RSLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Review of Systems:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/ReviewOfSystemsTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/PMHLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Past Medical History:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/PastMedicalHistoryTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/PSMLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Past Surgical History:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/PastSurgicalHistoryTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/MLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Medications:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/MedicationsTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/ALabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Allergies:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/AllergiesTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/FMLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Family History:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/FamilyHistoryTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/SHLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Social History:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/SocialHistoryTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>
+		
+		 <TextView
+		     android:id="@+id/VSLabel"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:text="Vital Signs:"
+		     android:textSize="@dimen/learning_cases_label_size" />
+		
+		 <TextView
+		     android:id="@+id/VitalSignsTextView"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/back"
+		     android:text="TextView"
+		     android:textSize="@dimen/learning_cases_text_size" 
+		     android:layout_margin="3dp"
+		     android:padding = "2dp"/>            
+        
+    </LinearLayout>
+</ScrollView>
+
+
+    
+

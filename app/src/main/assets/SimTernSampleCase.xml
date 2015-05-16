@@ -1,0 +1,145 @@
+<SimTern>
+	<History>
+		<ChiefComplaint>Chest pain.</ChiefComplaint>
+		<HistoryOfPresentIllness>A 58 year-old male with history of hypertension, hyperlipidemia, and coronary artery disease presents to the emergency room with acute onset of chest pain while shoveling snow after work.  He developed substernal chest pressure with radiation to his left arm while shoveling snow that was associated with nausea, diaphoresis, and shortness of breath, which was similar to his previous episodes of chest pain.  He took two nitroglycerin tablets on the way to the emergency room which relieved his pain, which lasted approximately 30 minutes.  He is currently pain free and states that all of his symptoms have resolved.  He is, however, very worried about his heart.  His last stress test was 5 years ago and he has never had a cardiac catheterization.    He took a baby aspirin this morning and was given a full strength aspirin in the emergency room.</HistoryOfPresentIllness>
+		<ReviewOfSystems>As per HPI, otherwise negative.</ReviewOfSystems>
+		<PastMedicalHistory>Significant for hypertension, hyperlipidemia, and coronary artery disease.</PastMedicalHistory>
+		<PastSurgicalHistory>None.</PastSurgicalHistory>
+		<Medications>Simvastatin, metoprolol, lisinopril, aspirin, and nitroglycerin.</Medications>
+		<Allergies>No known drug allergies.</Allergies>
+		<FamilyHistory>Noncontributory.</FamilyHistory>
+		<SocialHistory>Patient denies any smoking, alcohol consumption, or illicit drug use.  She lives at home with her husband.</SocialHistory>
+		<VitalSigns>Temperature 36.6 C, heart rate 76, respiratory rate 16, blood pressure 124/74, and oxygen saturation 99% on room air.</VitalSigns>
+	</History>
+	<PhysicalExam>
+		<General Required="0">The patient is awake, alert, and oriented.  He appears well-nourished and is in no acute distress.</General>
+		<HEENT Required="0">Pupils are equal, round, and reactive to light, extra-ocular movements are intact, and there is no scleral icterus or conjunctival pallor.  The neck is supple.  There is cervical no lymphadenopathy.  Tympanic membranes are clear and the cone of light is clearly visualized.  The oropharynx appears within normal limits and mucus membranes are moist.</HEENT>
+		<Cardiovascular Required="1">There is a regular heart rate and rhythm.  There are no murmurs, rubs, or gallops appreciated.  There is no jugular venous distention and the point of maximal impulse is just lateral to the 5th mid-clavicular space. Chest pain is not reproducible by palpation.</Cardiovascular>
+		<Respiratory Required="1">The lungs are clear to auscultation bilaterally.  There are no wheezes, rales, or rhonchi appreciated.</Respiratory>
+		<Abdomen Required="1">The abdomen is soft, nontender, and nondistended with active bowel sounds throughout.  There is no guarding or rebound tenderness.  Neither the inferior liver border nor spleen are palpated.</Abdomen>
+		<Genitourinary Required="0">The external genitalia appear appropriate for age.  There is no urethral discharge present.</Genitourinary>
+		<Extremities Required="1">There is no lower extremity edema or calf tenderness.  Radial and dorsalis pedis pulses are 2+ and equal bilaterally.  Capillary refill is less than 2 seconds.</Extremities>
+		<Back Required="0">There is no costovertebral angle, spinal, or paraspinal tenderness.</Back>
+		<Skin Required="0">There are no rashes, lesions, or evidence of jaundice.  Skin turgor is within normal limits.</Skin>
+		<Neurological Required="0">The patient is alert and oriented to person, place, and time.  Deep tendon reflexes are 2+ and symmetric throughout.  Cranial nerves are intact.  Power is 5/5 in all extremities.  No focal deficits appreciated.</Neurological>		
+	</PhysicalExam>
+	<ERLabs>
+		<CBC>
+			<WBC>7.4</WBC>
+			<RBC>4.1</RBC>
+			<Hb>13.7</Hb>
+			<Hct>43.0</Hct>
+			<RDW>12</RDW>
+			<RBCMCV>93</RBCMCV>
+			<MCHC>32</MCHC>
+			<Plt>289</Plt>
+		</CBC>
+		<BMP>
+			<Sodium>141</Sodium>
+			<Potassium>4.2</Potassium>
+			<Chloride>113</Chloride>
+			<Bicarbonate>24</Bicarbonate>
+			<UreaNitrogen>12</UreaNitrogen>
+			<Creatine>0.91</Creatine>
+			<Glucose>88</Glucose>
+			<Calcium>8.9</Calcium>
+		</BMP>
+		<CMP>
+			<AST>21</AST>
+			<ALT>22</ALT>
+			<AlkalinePhosphatase>53</AlkalinePhosphatase>
+			<TotalBilirubin>0.22</TotalBilirubin>
+			<Protein>7.2</Protein>
+			<Albumin>4.1</Albumin>
+		</CMP>
+		<CoagulationFactors>
+			<PTT>21.2</PTT>
+			<PT>10.1</PT>
+			<INR>1.0</INR>
+		</CoagulationFactors>
+		<Amylase>61</Amylase>
+		<Lipase>23</Lipase>
+		<Troponin-I>0.01</Troponin-I>
+		<Myoglobin>27</Myoglobin>
+		<CreatineKinaseMB>2</CreatineKinaseMB>
+		<Urinalysis>Neg</Urinalysis>
+		<EKG>Normal sinus rhythm</EKG>
+		<CXG>No acute process</CXG>
+	</ERLabs>
+	<Orders>
+		<AdmitTo>
+		    <RequiredOption>
+		        <Option>Step down ICU</Option>  
+		        <Option>Medical floor with monitor</Option>
+		        <Option>Observation</Option>
+		    </RequiredOption>
+		</AdmitTo>
+		<Diet>
+		    <Required>NPO after midnight for procedure</Required>   
+		</Diet>
+		<Activity>
+		    <Required>Bed rest with bathroom privileges</Required>
+		</Activity>
+		<Vital>
+		    <Required>Per Floor Routine</Required>
+		    <Required>Telemetry</Required>
+		</Vital>
+		<DVT>
+		    <Required>Lovenox 40mg subcutaneous once daily</Required>
+		    <Required>Compression Cuffs</Required>
+		</DVT>
+		<IV>
+		    <Required>D5 1/2NS with 20 mEq KCl</Required>
+		    <Required>Saline lock</Required>
+		</IV>	
+		<AdditionalOrders>
+		    <Required>Metoprolol Succinate (Toprol XL)</Required>
+			<Required>Nuclear Stress Test: Treadmill</Required>
+			<Required>Electrocardiogram (ECG, EKG)</Required>
+			<Required>Morphine Injection (Duramorph)</Required>
+			<Required>Oxygen</Required>
+			<Required>Nitroglycerin (Nitro-Dur, Nitrostat, Rectiv)</Required>
+			<Required>Aspirin</Required>
+			<Required>Serial cardiac enzymes</Required>
+			<Required>Lipid panel</Required>
+			<Required>Thyroid Stimulating Hormone (TSH)</Required>
+			<Required>Simvastatin (Zocor)</Required>
+			<Required>Lisinopril (Prinivil, Zestril)</Required>
+			<Required>2D Transthroacic Echocardiogram (2D Echo)</Required>
+			<Required>High Sensitivity C- Reactive Protein (hs-CRP)</Required>
+			<Required>Brain Natriuretic Peptide (BNP)</Required>
+			<Required>Glycosylated Hemoglobin (Hemoglobin A1c)</Required>
+		</AdditionalOrders>	
+	</Orders>
+	<Day1>
+		<Subjective>No complaints overnight.  Patient denies any further chest pain.</Subjective>
+		<Objective>
+			<Temperature>36.7</Temperature>
+			<HeartRate>75</HeartRate>
+			<RespiratoryRate>16</RespiratoryRate>
+			<BloodPressure>128/82</BloodPressure>
+			<OxygenSaturation>100% on room air</OxygenSaturation>
+			<PhysicalExam>
+				<General Required="0">The patient is awake, alert, and oriented.  He appears well-nourished and is in no acute distress.</General>
+				<HEENT Required="0">Pupils are equal, round, and reactive to light, extra-ocular movements are intact, and there is no scleral icterus or conjunctival pallor.  The neck is supple.  There is cervical no lymphadenopathy.  Tympanic membranes are clear and the cone of light is clearly visualized.  The oropharynx appears within normal limits and mucus membranes are moist.</HEENT>
+				<Cardiovascular Required="1">There is a regular heart rate and rhythm.  There are no murmurs, rubs, or gallops appreciated.  There is no jugular venous distention and the point of maximal impulse is just lateral to the 5th mid-clavicular space. Chest pain is not reproducible by palpation.</Cardiovascular>
+				<Respiratory Required="1">The lungs are clear to auscultation bilaterally.  There are no wheezes, rales, or rhonchi appreciated.</Respiratory>
+				<Abdomen Required="1">The abdomen is soft, nontender, and nondistended with active bowel sounds throughout.  There is no guarding or rebound tenderness.  Neither the inferior liver border nor spleen are palpated.</Abdomen>
+				<Genitourinary Required="0">The external genitalia appear appropriate for age.  There is no urethral discharge present.</Genitourinary>
+				<Extremities Required="1">There is no lower extremity edema or calf tenderness.  Radial and dorsalis pedis pulses are 2+ and equal bilaterally.  Capillary refill is less than 2 seconds.</Extremities>
+				<Back Required="0">There is no costovertebral angle, spinal, or paraspinal tenderness.</Back>
+				<Skin Required="0">There are no rashes, lesions, or evidence of jaundice.  Skin turgor is within normal limits.</Skin>
+				<Neurological Required="0">The patient is alert and oriented to person, place, and time.  Deep tendon reflexes are 2+ and symmetric throughout.  Cranial nerves are intact.  Power is 5/5 in all extremities.  No focal deficits appreciated.</Neurological>		
+			</PhysicalExam>
+		</Objective>
+		<AssessmentAndPlan>58 year-old male with history of hypertension and hyperlipidemia admitted for stable angina.
+
+1. Follow up treadmill stress test and nuclear myoview results.  Continue MONA PRN.
+2. Discharge Planning:  Discharge home today if stress test normal.</AssessmentAndPlan>
+
+	</Day1>
+</SimTern>
+
+
+
+       

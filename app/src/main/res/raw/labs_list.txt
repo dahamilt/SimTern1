@@ -1,0 +1,189 @@
+ANCA
+Anti-Cardiolipin Antibody
+Anti-CCP
+Anti-Double Stranded DNA
+Anti-GBM Antiboody
+Anti-Jo-1 Antibody
+Anti-Mitochondrial Antibody
+Anti-nuclear Antibody (ANA)
+Anti-Parietal Cell Antibody
+Antiphospholipid Antibody Panel
+Anti-Ro and Anti-La Antibodies
+Anti-Scl-70 Antibody
+Anti-Smooth Muscle Antibody
+Antithrombin III
+Anti-thyroid Antibodies (Anti-TPO)
+Anti-Tissue Transglutaminase IgA
+Anti-U1RNP and Anti-Smith
+Anti-Xa (for Fondaparinux) 
+Anti-Xa (for Fragmin) 
+Anti-Xa (for Lovenox)
+Anti-Xa (for UF Heparin)
+APCR (Factor V Leiden)
+Amylase (Urine)
+Bence Jones Protein (Urine) 
+Bicarbonate (Urine, Random)
+Calcium (Urine, Random)
+Chloride (Urine, Random)
+Creatinine (Urine, Random)
+Drugs of Abuse (Urine)
+Eosinophils (Urine)
+Free Cortisol (Urine)
+Glucose (Urine, Random) 
+Hemosiderin (Urine)
+Microalbumin (Urine)
+Osmolality (Urine, Random)
+Phosphorus (Urine, Random)
+Potassium (Urine, Random)
+Protein, Total (Urine, Random) 
+Protein, Total with Cr ratio (Urine, Random)
+Sodium (Urine, Random)
+Urea Nitrogen (Urine, Random)
+24 Hour Urine Studies
+Urinalysis (UA)
+CK-MB
+Creatinine (24 hour Urine)
+Creatinine (Random Urine)
+Serial cardiac enzymes
+Troponin T 
+Troponin I
+Creatine Kinase, Creatine Phosphokinase (CK, CPK)
+C-Reactive Protein (CRP)
+High Sensitivity C- Reactive Protein (hs-CRP)
+Complete Blood Count (CBC)
+CBC with Diff
+D-dimer
+Coagulation Studies
+Factor II 
+Factor IX 
+Factor V
+Factor VII
+Factor VIII
+Factor X
+Factor XI
+Factor XII
+Factor XIII Screen
+Plasminogen (Functional Assay) 
+Platelet Aggregation
+Protein C 
+Protein S
+PT
+International Normalized Ratio (INR)
+PTT 
+Heparin PF4 antibody (HIT)
+Thrombin Time
+Hypercoagulation Panel
+Anemia Work-Up
+Ferritin
+Fibrinogen 
+Folate
+Haptoglobin 
+Iron
+Reticulocyte Count 
+Total Iron Binding Capacity (TIBC)
+Vitamin B12 
+Heparin PF4 antibody (HIT)
+Basic Metabolic Panel (BMP)
+Comprehensive Metabolic Panel (CMP)
+Electrolytes
+Aspartate Trasaminase (AST, SGOT)
+Alanine Trasaminase (ALT, SGPT)
+Ammonia
+Amylase
+Alkaline Phosphatase (ALP)
+Bilirubin, Direct 
+Bilirubin, Total
+Lipase 
+Lactic Acid (Lactate) 
+Lactate Dehydrogenase (LDH) 
+Protein, Total 
+Prealbumin
+Arterial Blood Gas (ABG)
+Lipid Panel
+Hepatic Panel (LFTs)
+Alpha-1-anitrypsin
+Brain Natriuretic Peptide (BNP)
+Ceruloplasmin
+CPK (Creatine Kinase)
+GGT (Gamma Glutamyl Transferase)
+Hemoglobin A1c
+Osmolality (Serum) 
+NT-proBNP 
+Homocysteine
+Uric Acid 
+25-OH Vitamin D
+ACTH
+Cortisol 
+Estradiol
+Thyroid Stimulating Hormone (TSH)
+Free T4
+HCG (Quantitative Blood)
+Human Growth Hormone (HGH) 
+Glycosylated Hemoglobin (Hemoglobin A1c)
+IGF-1 
+Lutenizing Hormone (LH)
+Progesterone
+Prolactin
+PTH
+Sex Hormone Binding Globulin 
+Testosterone
+Thyroid Panel
+Cerebrospinal Fluid (CSF)
+Oligoclonal Bands (CSF)
+Glucose (CSF)
+Protein, Total (CSF)
+Acetaminophen
+Acetone
+Carbamazepine (Tegretol)
+Digoxin Level
+Dilantin Level
+Lithium Level 
+Phenobarbital Level 
+Salicylates
+Valproic Acid Level
+Alpha Fetoprotein (AFP)
+CA-125
+CA-15-3 
+CA-19-9
+Carcinoembryonic Antigen (CEA) Non Smokers at 50 Years
+Carcinoembryonic Antigen (CEA) Non Smokers at 70 Years
+Carcinoembryonic Antigen (CEA) Smokers
+Prostate Specific Antigen (PSA) (Total) 
+Albumin - Fluid 
+Glucose (Fluid)
+LDH (Fluid)
+Lipase (Fluid)
+pH (Fluid)
+Protein, Total (Fluid)
+Triglycerides (Fluid)
+Urea Nitrogen (Fluid)
+Alcohols (Ethanol, Methanol, Isopropyl Alcohol)
+Benzodiazipines (Serum) 
+Cocaine
+Opiates
+C- Reactive Protein (Inflammation)
+Complement Factor B 
+C1 Inhibitor (Antigen)
+C3 
+C4 
+Eosinophil Sedimentation Rate (ESR)
+Total Complement 
+Hepatitis Panel
+HIV-1/2 Antibody
+IgE (Total) 
+Immunoglobulin A 
+Immunoglobulin G 
+Immunoglobulin M 
+H pylori IgG Antibody ( Immune Ratio)
+Rheumatoid Factor 
+Osmolality (Stool)
+Stool Sodium (Stool Na)
+Stool Potassium (Stool K)
+Bence Jones Protein (Serum) 
+Bence Jones Protein (Urine) 
+Free Light Chains (Serum)
+Free Light Chains (Urine) 
+Joint Fluid Crystals Immunology
+MTHFR DNA Testing
+SPEP with immunoglobulins IgG, IgA, IgM
+Sputum for Eosinophils

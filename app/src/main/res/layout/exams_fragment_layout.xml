@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >    
+	
+    <ListView
+        android:id="@+id/exams_selection_listview"
+        android:layout_width="140dp"
+        android:layout_height="400dp"
+        android:textSize="12sp" >
+    </ListView>
+ 
+	<ScrollView 
+	    android:id="@+id/exams_output_scrollview"
+	    android:layout_toRightOf="@+id/exams_selection_listview"
+	    android:layout_width="match_parent"
+	    android:layout_height="400dp" 
+	    android:background="@drawable/back" 
+	    android:layout_margin="3dp"
+		android:padding = "2dp" >   
+	     	
+		<TextView
+		    android:id="@+id/exams_output_textview"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:text="Large Text" />
+		
+	</ScrollView>
+    <Button
+        android:id="@+id/proceed_button"
+	    android:layout_below="@+id/exams_selection_listview"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:text="Proceed"
+	    android:layout_marginLeft="100dp"
+	    android:layout_marginRight="100dp" 
+	    android:layout_marginTop="6dp" 
+	    android:layout_marginBottom="6dp"   />
+    
+</RelativeLayout>

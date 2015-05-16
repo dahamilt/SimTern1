@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/labs_cbc_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"    
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/cbcFishboneImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/cbcfishbone" />
+
+    <TextView
+        android:id="@+id/complete_blood_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:text="Complete Blood Count" />
+
+    <TextView
+        android:id="@+id/hemoglobin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:text="hemoglobin"  
+        android:textSize="8dp"/>
+    
+    <TextView
+        android:id="@+id/hct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:text="hct"  
+        android:textSize="8dp"/>
+    
+    <TextView
+        android:id="@+id/wbc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp"
+        android:text="wbc"  
+        android:textSize="8dp"/>
+    
+    <TextView
+        android:id="@+id/platelets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="26dp"
+        android:text="platelets"  
+        android:textSize="8dp"/>
+    
+    <TextView
+        android:id="@+id/RBC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="57dp"
+        android:text="RBC"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/RDW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="57dp"
+        android:text="RDW"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/MCV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="57dp"
+        android:text="MCV"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/MCHC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbcFishboneImageView"
+        android:layout_alignTop="@+id/cbcFishboneImageView"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="57dp"
+        android:text="MCHC"  
+        android:textSize="8dp"/>
+
+
+</RelativeLayout>

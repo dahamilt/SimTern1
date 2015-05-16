@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:id="@+id/admit_to_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginTop="20dp"
+	        android:text="Admit To: " />
+	
+	    <LinearLayout
+	        android:id="@+id/admit_to_layout"
+	        android:background="@drawable/back"
+        	android:layout_width="140dp"
+        	android:layout_height="wrap_content"       	
+        	android:layout_alignLeft="@+id/admit_to_label"
+        	android:layout_below="@+id/admit_to_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/admit_to_medical_floor_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Medical Floor"/>
+	        <CheckedTextView 
+	            android:id="@+id/admit_to_medical_floor_monitor_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Medical Floor with monitor"/>
+	        <CheckedTextView 
+	            android:id="@+id/admit_to_step_down_icu_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Step down ICU"/>
+	        <CheckedTextView 
+	            android:id="@+id/admit_to_critical_care_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Critical Care (ICU)"/>
+	        <CheckedTextView 
+	            android:id="@+id/admit_to_observation_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Observation"/>     
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/diet_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/admit_to_label"
+	        android:layout_toRightOf="@+id/admit_to_layout"
+	        android:layout_marginLeft="10dp"
+	        android:text="Diet: " />
+
+	    
+	    <LinearLayout
+	        android:id="@+id/diet_layout"
+        	android:layout_width="140dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignLeft="@+id/diet_label"
+        	android:layout_below="@+id/diet_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/diet_regular_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Regular"/>
+	        <CheckedTextView 
+	            android:id="@+id/diet_cardiac_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Cardiac"/>
+	        <CheckedTextView 
+	            android:id="@+id/diet_diabetic_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Diabetic"/>
+	        <CheckedTextView 
+	            android:id="@+id/diet_cardiac_diabetic_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Cardiac/Diabetic"/>
+	        <CheckedTextView 
+	            android:id="@+id/diet_npo_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "NPO"/>     
+	        <CheckedTextView 
+	            android:id="@+id/diet_npo_after_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="0dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "NPO after midnight for procedure"/>     			    
+	    </LinearLayout>	    
+	    
+	    <TextView
+	        android:id="@+id/activity_level_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/diet_layout"
+	        android:layout_alignLeft="@+id/admit_to_layout"
+	        android:layout_marginTop="5dp"
+	        android:text="Activity Level: " />
+
+	    
+	    <LinearLayout
+	        android:id="@+id/activity_level_layout"
+        	android:layout_width="140dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignLeft="@+id/activity_level_label"
+        	android:layout_below="@+id/activity_level_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/activity_level_as_tolerated_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "As tolerated"/>
+	         
+	        <CheckedTextView 
+	            android:id="@+id/activity_level_up_to_chair_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Up to chair"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/activity_level_bed_rest_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Bed rest"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/activity_level_bed_rest_with_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Bed rest with bathroom privileges"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/activity_level_fall_precautions_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Fall precautions"/>     
+			    
+	    </LinearLayout>	    	    
+	    
+	    <TextView
+	        android:id="@+id/vital_signs_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/activity_level_label"
+	        android:layout_toRightOf="@+id/activity_level_layout"
+	        android:layout_marginLeft="10dp"
+	        android:text="Vital Signs: " />
+
+	   <LinearLayout
+	        android:id="@+id/vital_signs_layout"
+        	android:layout_width="140dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignLeft="@+id/vital_signs_label"
+        	android:layout_below="@+id/vital_signs_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/vital_signs_per_floor_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Per floor routine"/>
+	         
+	        <CheckedTextView 
+	            android:id="@+id/vital_signs_every_4_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Every 4 hours"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/vital_signs_telemetry_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Telemetry"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/vital_signs_continuous_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Continuous pulse oximetry"/>
+   
+	    </LinearLayout>	 	    
+	    
+	    <TextView
+	        android:id="@+id/neuro_checks_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/activity_level_layout"
+	        android:layout_alignLeft="@+id/activity_level_layout"
+	        android:layout_marginTop="5dp"
+	        android:text="Neuro Checks: " />
+
+	   <LinearLayout
+	        android:id="@+id/neuro_checks_layout"
+        	android:layout_width="140dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignLeft="@+id/neuro_checks_label"
+        	android:layout_below="@+id/neuro_checks_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/neuro_checks_every_8_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Every 8 hours"/>
+	         
+	        <CheckedTextView 
+	            android:id="@+id/neuro_checks_every_4_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Every 4 hours"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/neuro_checks_every_2_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Every 2 hours"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/neuro_checks_not_indicated_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Not indicated"/>
+   
+	    </LinearLayout>	 	    
+	    
+	    <TextView
+	        android:id="@+id/iv_fluids_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/neuro_checks_label"
+	        android:layout_toRightOf="@+id/neuro_checks_layout"
+	        android:layout_marginLeft="10dp"
+	        android:text="IV Fluids: " />
+
+	   <LinearLayout
+	        android:id="@+id/iv_fluids_layout"
+        	android:layout_width="140dp"
+        	android:layout_height="wrap_content"
+        	android:layout_alignLeft="@+id/iv_fluids_label"
+        	android:layout_below="@+id/iv_fluids_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/iv_fluids_ns_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "NS"/>
+	         
+	        <CheckedTextView 
+	            android:id="@+id/iv_fluids_half_ns_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "1/2NS"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/iv_fluids_ds_half_ns_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "D5 1/2NS"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/iv_fluids_d5_half_ns_with_kcl_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "D5 1/2NS with 20 mEq KCl"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/iv_fluids_saline_lock_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Saline lock"/>   
+			    
+	    </LinearLayout>	 		    
+	        
+	    <TextView
+	        android:id="@+id/dvt_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/neuro_checks_layout"
+	        android:layout_alignLeft="@+id/neuro_checks_layout"
+	        android:layout_marginTop="5dp"
+	        android:text="DVT Prophylaxis: " />
+	
+	   <LinearLayout
+	        android:id="@+id/dvt_layout"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_alignLeft="@+id/dvt_label"
+        	android:layout_below="@+id/dvt_label"
+        	android:orientation="vertical">
+	  
+	         <CheckedTextView 
+	            android:id="@+id/dvt_lovenox_once_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Lovenox 40mg subcutaneous once daily"/>
+	         
+	        <CheckedTextView 
+	            android:id="@+id/dvt_lovenox_twice_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Lovenox 40mg subcutaneous twice daily"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/dvt_heparin_once_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Heparin 5,000 units subcutaneous once daily"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/dvt_heparin_twice_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Heparin 5,000 units subcutaneous twice daily"/>
+	        
+	        <CheckedTextView 
+	            android:id="@+id/dvt_compression_cuffs_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Compression cuffs"/>   
+			    
+			<CheckedTextView 
+			    android:id="@+id/dvt_not_indicated_check"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:gravity="center_vertical"
+			    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			    android:padding="1dp"
+			    android:textSize="12sp"
+			    android:clickable="true"
+    			android:focusable="true"
+			    android:text = "Not indicated"/>   
+	    </LinearLayout>	 		    
+	
+	    <fragment
+	        android:id="@+id/fragment1"
+	        android:name="com.example.simtern1.AdditionalOrdersFragment"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/dvt_layout"
+	        android:layout_below="@+id/dvt_layout" />
+	    
+	</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/labs_bmp_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/fishboneBmpImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bpfishbone" />
+
+    <TextView
+        android:id="@+id/basic_metabolic_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:text="Basic Metabolic Panel" />
+
+    <TextView
+        android:id="@+id/sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="sodium"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/chloride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:text="chloride"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/BUN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
+        android:text="BUN"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/glucose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="25dp"
+        android:text="glucose"  
+        android:textSize="8dp"/>    
+
+    <TextView
+        android:id="@+id/potassium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="35dp"
+        android:text="potassium"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/bicarbonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="35dp"
+        android:text="bicarbonate"  
+        android:textSize="8dp"/>    
+        
+    <TextView
+        android:id="@+id/creatine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="35dp"
+        android:text="creatinine"  
+        android:textSize="8dp"/>
+
+    <TextView
+        android:id="@+id/calcium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fishboneBmpImageView"
+        android:layout_alignTop="@+id/fishboneBmpImageView"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:text="calcium"  
+        android:textSize="8dp"/>      
+
+    
+</RelativeLayout>

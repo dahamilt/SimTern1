@@ -1,0 +1,3 @@
+C:\Users\David\AndroidStudioProjects\SimTern1\app\build\intermediates\classes\debug
+C:\Users\David\AndroidStudioProjects\SimTern1\app\build\intermediates\pre-dexed\debug\classes-adf35b3290a5b867e352ad0f105f1e04ba42eb2a.jar
+C:\Users\David\AndroidStudioProjects\SimTern1\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-50212ae731c39c4de7ce2645c088e98531273a00.jar

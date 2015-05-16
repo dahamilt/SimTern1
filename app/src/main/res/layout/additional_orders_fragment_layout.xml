@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <TextView
+        android:id="@+id/search_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"        
+        android:text="Additional Order Search: " />       
+    
+     <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/search_label"
+		android:layout_below="@+id/search_label"
+		android:inputType="text"
+        android:ems="10" />   
+    
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/search_edit_text"
+        android:layout_alignTop="@+id/search_edit_text"
+        android:layout_toRightOf="@+id/search_edit_text"
+        android:gravity="left"
+        android:text="Search" />
+
+    <ScrollView
+        android:id="@+id/orders_search_result_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/search_edit_text"
+        android:layout_alignLeft="@+id/search_edit_text" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/orders_search_result_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/add_orders_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/orders_search_result_scrollview"
+        android:layout_below="@+id/orders_search_result_scrollview"
+        android:gravity="left"
+        android:text="Add Orders" />
+
+     <TextView
+        android:id="@+id/added_orders_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/add_orders_button"
+        android:layout_below="@+id/add_orders_button"     
+        android:text="Added Additional Orders: " />        
+    
+    <ScrollView
+        android:id="@+id/added_orders_scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/added_orders_label"
+        android:layout_alignLeft="@+id/added_orders_label"  >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/added_orders_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+    
+    
+</RelativeLayout>
