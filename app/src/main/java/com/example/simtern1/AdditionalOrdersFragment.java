@@ -33,6 +33,7 @@ public class AdditionalOrdersFragment extends Fragment{
 
     ArrayList<String> m_LabListArray;
     ArrayList<String> m_PostSearchListArray;
+    ArrayList<String> m_AddedOrdersArray;
     EditText searchEditText;
     ArrayAdapter<String> listAdapter;
     ArrayAdapter<String> addedListAdapter;
@@ -56,10 +57,10 @@ public class AdditionalOrdersFragment extends Fragment{
        // m_PostSearchListArray.addAll(labListStrings);
        additionalOrderListView = (ListView)fragView.findViewById(R.id.orders_search_result_listview);
 
-       listAdapter = new ArrayAdapter<String>(getActivity()/*.getApplicationContext()*/,R.layout.exams_list_view_item,//android.R.layout.simple_list_item_1,
+       listAdapter = new ArrayAdapter<String>(getActivity(),R.layout.exams_list_view_item,//android.R.layout.simple_list_item_1,
                m_PostSearchListArray);//android.R.id.text1,
 
-      additionalOrderListView.setAdapter(listAdapter);
+        additionalOrderListView.setAdapter(listAdapter);
         additionalOrderListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         additionalOrderListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -70,11 +71,15 @@ public class AdditionalOrdersFragment extends Fragment{
             }
 
         });
-
+        //get the reference for the added orders listview, store it to the member variable
         addedOrderListView = (ListView)fragView.findViewById(R.id.added_orders_listview);
+        m_AddedOrdersArray = new ArrayList<String>();
+        m_AddedOrdersArray.add("Dave Hamilton, Bitch");
+        addedListAdapter= new ArrayAdapter<String>(getActivity(),R.layout.exams_list_view_item,
+                m_AddedOrdersArray);
+        addedOrderListView.setAdapter(addedListAdapter);
+        addedOrderListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-        addedListAdapter= new ArrayAdapter<String>(getActivity()/*.getApplicationContext()*/,R.layout.exams_list_view_item,//android.R.layout.simple_list_item_1,
-                m_PostSearchListArray);//android.R.id.text1,
 
         Button searchButton = (Button) fragView.findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener()
@@ -174,6 +179,7 @@ public class AdditionalOrdersFragment extends Fragment{
             }
         }
        // m_PostSearchListArray = newSearchList;
+        additionalOrderListView.clearChoices();
         listAdapter.clear();
         listAdapter.addAll(newSearchList);
 
@@ -184,13 +190,34 @@ public class AdditionalOrdersFragment extends Fragment{
     public void onClickAddOrders(View view) {
         SparseBooleanArray checked = additionalOrderListView.getCheckedItemPositions();
         ArrayList newAddList = new ArrayList<String>();
-        for(int i = 0; i < checked.size(); i++) {
-            newAddList.add(m_PostSearchListArray.get(i));
+        for(int i = 0; i < m_PostSearchListArray.size(); i++) {
+            if(checked.get(i)) {
+                newAddList.add(m_PostSearchListArray.get(i));
+            }
             //if(m_LabListArray.get(i).contains(searchTerm)){
             //    newSearchList.add(m_LabListArray.get(i));
             //}
         }
-    }
+        addedOrderListView.clearChoices();
+        addedListAdapter.clear();
+        addedListAdapter.addAll(newAddList);
+        addedListAdapter.notifyDataSetChanged();
+
+        for(int j = m_PostSearchListArray.size()-1; j>=0; j--) {
+            if(checked.get(j)) {
+                m_LabListArray.remove(m_PostSearchListArray.get(j));
+                m_PostSearchListArray.remove(j);
+
+                //need to somehow remove this from master list as well, otherwise it will
+                //repopulate
+            }
+        }
+        additionalOrderListView.clearChoices();
+       // additionalOrderListView.requestLayout();
+      //  listAdapter.clear();
+      //  listAdapter.addAll(m_PostSearchListArray);
+        listAdapter.notifyDataSetChanged();
+}
     /*public void setLearningCaseFileName(String lcfn) {
         LearningCaseFileName = lcfn;
 
