@@ -555,13 +555,13 @@
 			    android:text = "Not indicated"/>   
 	    </LinearLayout>	 		    
 	
-	    <fragment
+<!--	    <fragment
 	        android:id="@+id/fragment1"
 	        android:name="com.example.simtern1.AdditionalOrdersFragment"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/dvt_layout"
 	        android:layout_below="@+id/dvt_layout" />
-	    
+	    -->
 	</RelativeLayout>
 </ScrollView>

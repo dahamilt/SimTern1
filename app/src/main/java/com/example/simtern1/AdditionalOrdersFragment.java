@@ -2,10 +2,15 @@ package com.example.simtern1;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.SparseBooleanArray;
 import android.util.Xml;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -17,14 +22,23 @@ import java.io.InputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
+import android.widget.ArrayAdapter;
 import android.app.Activity;
 import android.content.Context;
 import android.widget.TextView;
 
 public class AdditionalOrdersFragment extends Fragment{
-   @Override
+
+    ArrayList<String> m_LabListArray;
+    ArrayList<String> m_PostSearchListArray;
+    EditText searchEditText;
+    ArrayAdapter<String> listAdapter;
+    ArrayAdapter<String> addedListAdapter;
+    ListView additionalOrderListView;
+    ListView addedOrderListView;
+    @Override
    public View onCreateView(LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
       /**
@@ -33,7 +47,75 @@ public class AdditionalOrdersFragment extends Fragment{
 	  View fragView = inflater.inflate(
 			  R.layout.additional_orders_fragment_layout, container, false);
 
-       List<String> labListStrings = readTextFileAsList(getActivity().getApplicationContext(),R.raw.additional_orders_list);
+       searchEditText = (EditText)fragView.findViewById(R.id.search_edit_text);
+
+       m_LabListArray = (ArrayList<String>)readTextFileAsList(getActivity().getApplicationContext(),R.raw.additional_orders_list);
+       m_PostSearchListArray = new ArrayList<String>(m_LabListArray);
+       //m_LabListArray = new ArrayList<String>();
+       //m_LabListArray.addAll(labListStrings);
+       // m_PostSearchListArray.addAll(labListStrings);
+       additionalOrderListView = (ListView)fragView.findViewById(R.id.orders_search_result_listview);
+
+       listAdapter = new ArrayAdapter<String>(getActivity()/*.getApplicationContext()*/,R.layout.exams_list_view_item,//android.R.layout.simple_list_item_1,
+               m_PostSearchListArray);//android.R.id.text1,
+
+      additionalOrderListView.setAdapter(listAdapter);
+        additionalOrderListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        additionalOrderListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, final View view,
+                                    int position, long id) {
+                //final String item = (String) parent.getItemAtPosition(position);
+               // updateExamsTextView(listview, currentTextView);
+            }
+
+        });
+
+        addedOrderListView = (ListView)fragView.findViewById(R.id.added_orders_listview);
+
+        addedListAdapter= new ArrayAdapter<String>(getActivity()/*.getApplicationContext()*/,R.layout.exams_list_view_item,//android.R.layout.simple_list_item_1,
+                m_PostSearchListArray);//android.R.id.text1,
+
+        Button searchButton = (Button) fragView.findViewById(R.id.search_button);
+        searchButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                onClickSearchOrders(v);
+            }
+        });
+
+        Button addButton = (Button) fragView.findViewById(R.id.add_orders_button);
+        addButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                onClickAddOrders(v);
+            }
+        });
+        // ListView Item Click Listener
+   /*    listView.setOnItemClickListener(new OnItemClickListener() {
+
+           @Override
+           public void onItemClick(AdapterView<?> parent, View view,
+                                   int position, long id) {
+
+               // ListView Clicked item index
+               int itemPosition     = position;
+
+               // ListView Clicked item value
+               String  itemValue    = (String) listView.getItemAtPosition(position);
+
+               // Show Alert
+               Toast.makeText(getApplicationContext(),
+                       "Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
+                       .show();
+
+           }*/
+
+           //additionalOrderListView.add
        //res\raw\AdditionalOrdersList.txt
      /*  XmlPullParser parser = Xml.newPullParser();
        try {
@@ -82,38 +164,33 @@ public class AdditionalOrdersFragment extends Fragment{
         }
         return list;
     }
-    /*private void parseXML(XmlPullParser parser) throws XmlPullParserException,IOException
-    {
-        //ArrayList<product> products = null;
-        int eventType = parser.getEventType();
-        //Product currentProduct = null;
-        String text = "";
-        while (eventType != XmlPullParser.END_DOCUMENT){
-            String name = null;
-            switch (eventType){
-                case XmlPullParser.START_DOCUMENT:
-                    break;
-                case XmlPullParser.START_TAG:
-                    name = parser.getName();
 
-                    break;
-                case XmlPullParser.END_TAG:
-                    name = parser.getName();
-                    if (name.equalsIgnoreCase("ChiefComplaint")){
-                        ChiefComplaint = text;
-                    } else if (name.equalsIgnoreCase("HistoryOfPresentIllness")){
-                        HistoryOfPresentIllness = text;
-                    }
-                    break;
-                case XmlPullParser.TEXT:
-                    text = parser.getText();
-                    break;
+    public void onClickSearchOrders(View view) {
+        String searchTerm = searchEditText.getText().toString();
+        ArrayList newSearchList = new ArrayList<String>();
+        for(int i = 0; i < m_LabListArray.size(); i++) {
+            if(m_LabListArray.get(i).contains(searchTerm)){
+                newSearchList.add(m_LabListArray.get(i));
             }
-            eventType = parser.next();
         }
-    }*/
+       // m_PostSearchListArray = newSearchList;
+        listAdapter.clear();
+        listAdapter.addAll(newSearchList);
 
-
+        listAdapter.notifyDataSetChanged();
+        //searchEditText.getText();
+       //  m_LabListArray
+    }
+    public void onClickAddOrders(View view) {
+        SparseBooleanArray checked = additionalOrderListView.getCheckedItemPositions();
+        ArrayList newAddList = new ArrayList<String>();
+        for(int i = 0; i < checked.size(); i++) {
+            newAddList.add(m_PostSearchListArray.get(i));
+            //if(m_LabListArray.get(i).contains(searchTerm)){
+            //    newSearchList.add(m_LabListArray.get(i));
+            //}
+        }
+    }
     /*public void setLearningCaseFileName(String lcfn) {
         LearningCaseFileName = lcfn;
 

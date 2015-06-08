@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
 
      <TextView
@@ -11,16 +11,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="5dp"        
-        android:text="Additional Order Search: " />       
+        android:text="Additional Order Search: "
+         android:layout_marginTop="10dp" />
     
      <EditText
         android:id="@+id/search_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:layout_alignLeft="@+id/search_label"
-		android:layout_below="@+id/search_label"
-		android:inputType="text"
-        android:ems="10" />   
+         android:inputType="text"
+        android:ems="10"
+         android:layout_below="@+id/search_label"
+         android:layout_alignLeft="@+id/search_label"
+         android:layout_alignStart="@+id/search_label" />
     
     <Button
         android:id="@+id/search_button"
@@ -30,66 +32,50 @@
         android:layout_alignTop="@+id/search_edit_text"
         android:layout_toRightOf="@+id/search_edit_text"
         android:gravity="left"
-        android:text="Search" />
+        android:text="Search"
+        />
 
-    <ScrollView
-        android:id="@+id/orders_search_result_scrollview"
+    <ListView
+        android:id="@+id/orders_search_result_listview"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/search_edit_text"
-        android:layout_alignLeft="@+id/search_edit_text" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-
-            <ListView
-                android:id="@+id/orders_search_result_listview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </ListView>
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_alignParentLeft="true"
+        android:dividerHeight="1dp"
+        android:horizontalSpacing="3dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp" />
 
     <Button
         android:id="@+id/add_orders_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/orders_search_result_scrollview"
-        android:layout_below="@+id/orders_search_result_scrollview"
         android:gravity="left"
-        android:text="Add Orders" />
+        android:text="Add Orders"
+        android:layout_below="@+id/orders_search_result_listview"
+        android:layout_alignLeft="@+id/search_edit_text"
+        android:layout_alignStart="@+id/search_edit_text" />
 
      <TextView
         android:id="@+id/added_orders_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/add_orders_button"
-        android:layout_below="@+id/add_orders_button"     
-        android:text="Added Additional Orders: " />        
-    
-    <ScrollView
-        android:id="@+id/added_orders_scrollview"
-        android:layout_width="wrap_content"
+         android:text="Added Additional Orders: "
+         android:layout_marginTop="17dp"
+         android:layout_below="@+id/add_orders_button"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+    <ListView
+        android:id="@+id/added_orders_listview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/added_orders_label"
-        android:layout_alignLeft="@+id/added_orders_label"  >
+        android:layout_below="@+id/add_orders_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp">
+    </ListView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
 
-            <ListView
-                android:id="@+id/added_orders_listview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </ListView>
-
-        </LinearLayout>
-    </ScrollView>
-    
-    
 </RelativeLayout>

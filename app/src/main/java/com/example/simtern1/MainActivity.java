@@ -22,9 +22,9 @@ public class MainActivity extends Activity {
 	}
 	public void goToGI(View view) {
         //Starting a new Intent
-    Intent nextScreen = new Intent(getApplicationContext(), LearningCasesActivity.class);
+        Intent nextScreen = new Intent(getApplicationContext(), LearningCasesActivity.class);
 
 
-    startActivity(nextScreen);
-}
+        startActivity(nextScreen);
+    }
 }

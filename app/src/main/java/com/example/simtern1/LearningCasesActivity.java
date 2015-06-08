@@ -60,6 +60,12 @@ public class LearningCasesActivity extends ActionBarActivity  {
 		         .setTabListener(new TabListener<OrdersFragment>(
 		                 this, "Orders", OrdersFragment.class,LearningCaseFileName));
 		actionBar.addTab(tab);
+
+        tab = actionBar.newTab()
+                .setText("Additional Orders")
+                .setTabListener(new TabListener<AdditionalOrdersFragment>(
+                        this, "Additional Orders", AdditionalOrdersFragment.class,LearningCaseFileName));
+        actionBar.addTab(tab);
 	}
 
 	 @Override
