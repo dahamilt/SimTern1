@@ -102,7 +102,8 @@
         	android:layout_height="wrap_content"
         	android:layout_alignLeft="@+id/diet_label"
         	android:layout_below="@+id/diet_label"
-        	android:orientation="vertical">
+        	android:orientation="vertical"
+            android:background="@drawable/back">
 	  
 	         <CheckedTextView 
 	            android:id="@+id/diet_regular_check"
@@ -188,7 +189,8 @@
         	android:layout_height="wrap_content"
         	android:layout_alignLeft="@+id/activity_level_label"
         	android:layout_below="@+id/activity_level_label"
-        	android:orientation="vertical">
+        	android:orientation="vertical"
+            android:background="@drawable/back">
 	  
 	         <CheckedTextView 
 	            android:id="@+id/activity_level_as_tolerated_check"
@@ -201,8 +203,8 @@
 			    android:clickable="true"
     			android:focusable="true"
 			    android:text = "As tolerated"/>
-	         
-	        <CheckedTextView 
+
+	        <CheckedTextView
 	            android:id="@+id/activity_level_up_to_chair_check"
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
@@ -213,8 +215,8 @@
 			    android:clickable="true"
     			android:focusable="true"
 			    android:text = "Up to chair"/>
-	        
-	        <CheckedTextView 
+
+	        <CheckedTextView
 	            android:id="@+id/activity_level_bed_rest_check"
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
@@ -267,7 +269,8 @@
         	android:layout_height="wrap_content"
         	android:layout_alignLeft="@+id/vital_signs_label"
         	android:layout_below="@+id/vital_signs_label"
-        	android:orientation="vertical">
+        	android:orientation="vertical"
+           android:background="@drawable/back">
 	  
 	         <CheckedTextView 
 	            android:id="@+id/vital_signs_per_floor_check"
@@ -334,7 +337,8 @@
         	android:layout_height="wrap_content"
         	android:layout_alignLeft="@+id/neuro_checks_label"
         	android:layout_below="@+id/neuro_checks_label"
-        	android:orientation="vertical">
+        	android:orientation="vertical"
+           android:background="@drawable/back">
 	  
 	         <CheckedTextView 
 	            android:id="@+id/neuro_checks_every_8_check"
@@ -401,7 +405,8 @@
         	android:layout_height="wrap_content"
         	android:layout_alignLeft="@+id/iv_fluids_label"
         	android:layout_below="@+id/iv_fluids_label"
-        	android:orientation="vertical">
+        	android:orientation="vertical"
+           android:background="@drawable/back">
 	  
 	         <CheckedTextView 
 	            android:id="@+id/iv_fluids_ns_check"
@@ -469,18 +474,19 @@
 	        android:id="@+id/dvt_label"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/neuro_checks_layout"
+	        android:layout_below="@+id/iv_fluids_layout"
 	        android:layout_alignLeft="@+id/neuro_checks_layout"
 	        android:layout_marginTop="5dp"
 	        android:text="DVT Prophylaxis: " />
 	
 	   <LinearLayout
 	        android:id="@+id/dvt_layout"
-        	android:layout_width="match_parent"
+        	android:layout_width="300dp"
         	android:layout_height="wrap_content"
         	android:layout_alignLeft="@+id/dvt_label"
         	android:layout_below="@+id/dvt_label"
-        	android:orientation="vertical">
+        	android:orientation="vertical"
+           android:background="@drawable/back">
 	  
 	         <CheckedTextView 
 	            android:id="@+id/dvt_lovenox_once_check"
@@ -553,15 +559,16 @@
 			    android:clickable="true"
     			android:focusable="true"
 			    android:text = "Not indicated"/>   
-	    </LinearLayout>	 		    
-	
-<!--	    <fragment
-	        android:id="@+id/fragment1"
-	        android:name="com.example.simtern1.AdditionalOrdersFragment"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/dvt_layout"
-	        android:layout_below="@+id/dvt_layout" />
-	    -->
+	    </LinearLayout>
+
+        <Button
+            android:id="@+id/proceed_to_additional_orders_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Proceed"
+            android:layout_below="@+id/dvt_layout"
+
+            android:layout_centerHorizontal="true"/>
 	</RelativeLayout>
 </ScrollView>

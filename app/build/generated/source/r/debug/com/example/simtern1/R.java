@@ -866,7 +866,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0a0001;
         public static final int action_menu_presenter=0x7f0a0002;
         public static final int action_mode_close_button=0x7f0a0024;
-        public static final int action_settings=0x7f0a00bc;
+        public static final int action_settings=0x7f0a00bd;
         public static final int activity_chooser_view_content=0x7f0a0025;
         public static final int activity_level_as_tolerated_check=0x7f0a009c;
         public static final int activity_level_bed_rest_check=0x7f0a009e;
@@ -974,6 +974,7 @@ containing a value of this type.
         public static final int platelets=0x7f0a0071;
         public static final int potassium=0x7f0a0067;
         public static final int proceed_button=0x7f0a004a;
+        public static final int proceed_to_orders_button=0x7f0a00bc;
         public static final int progress_circular=0x7f0a0004;
         public static final int progress_horizontal=0x7f0a0005;
         public static final int protein=0x7f0a0081;

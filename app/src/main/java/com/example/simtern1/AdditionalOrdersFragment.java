@@ -51,6 +51,7 @@ public class AdditionalOrdersFragment extends Fragment{
        searchEditText = (EditText)fragView.findViewById(R.id.search_edit_text);
 
        m_LabListArray = (ArrayList<String>)readTextFileAsList(getActivity().getApplicationContext(),R.raw.additional_orders_list);
+       m_LabListArray.addAll((ArrayList<String>)readTextFileAsList(getActivity().getApplicationContext(),R.raw.labs_list));
        m_PostSearchListArray = new ArrayList<String>(m_LabListArray);
        //m_LabListArray = new ArrayList<String>();
        //m_LabListArray.addAll(labListStrings);
@@ -74,7 +75,6 @@ public class AdditionalOrdersFragment extends Fragment{
         //get the reference for the added orders listview, store it to the member variable
         addedOrderListView = (ListView)fragView.findViewById(R.id.added_orders_listview);
         m_AddedOrdersArray = new ArrayList<String>();
-        m_AddedOrdersArray.add("Dave Hamilton, Bitch");
         addedListAdapter= new ArrayAdapter<String>(getActivity(),R.layout.exams_list_view_item,
                 m_AddedOrdersArray);
         addedOrderListView.setAdapter(addedListAdapter);
@@ -189,7 +189,7 @@ public class AdditionalOrdersFragment extends Fragment{
     }
     public void onClickAddOrders(View view) {
         SparseBooleanArray checked = additionalOrderListView.getCheckedItemPositions();
-        ArrayList newAddList = new ArrayList<String>();
+        ArrayList newAddList = new ArrayList<String>(m_AddedOrdersArray);
         for(int i = 0; i < m_PostSearchListArray.size(); i++) {
             if(checked.get(i)) {
                 newAddList.add(m_PostSearchListArray.get(i));
@@ -222,4 +222,9 @@ public class AdditionalOrdersFragment extends Fragment{
         LearningCaseFileName = lcfn;
 
     }*/
+
+    //TODO   -  option to remove from added .
+    //TODO   -  proceed to check if response are correct.
+    //TODO  -  store response, whether correct or not
+    //TODO  -  When correct, close all tabs and fire up day 0 and day 1
 }
