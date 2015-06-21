@@ -68,11 +68,9 @@
 	</ERLabs>
 	<Orders>
 		<AdmitTo>
-		    <RequiredOption>
-		        <Option>Step down ICU</Option>  
-		        <Option>Medical floor with monitor</Option>
-		        <Option>Observation</Option>
-		    </RequiredOption>
+		    <RequiredOption>Step down ICU</RequiredOption>
+            <RequiredOption>Medical floor with monitor</RequiredOption>
+            <RequiredOption>Observation</RequiredOption>
 		</AdmitTo>
 		<Diet>
 		    <Required>NPO after midnight for procedure</Required>   
@@ -81,13 +79,16 @@
 		    <Required>Bed rest with bathroom privileges</Required>
 		</Activity>
 		<Vital>
-		    <Required>Per Floor Routine</Required>
+		    <Required>Per floor routine</Required>
 		    <Required>Telemetry</Required>
 		</Vital>
 		<DVT>
 		    <Required>Lovenox 40mg subcutaneous once daily</Required>
 		    <Required>Compression Cuffs</Required>
 		</DVT>
+        <Neuro>
+            <Required>Not indicated</Required>
+        </Neuro>
 		<IV>
 		    <Required>D5 1/2NS with 20 mEq KCl</Required>
 		    <Required>Saline lock</Required>

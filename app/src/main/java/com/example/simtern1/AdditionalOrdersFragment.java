@@ -1,7 +1,10 @@
 package com.example.simtern1;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Pair;
 import android.util.SparseBooleanArray;
 import android.util.Xml;
 import android.view.LayoutInflater;
@@ -23,6 +26,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import android.widget.ArrayAdapter;
 import android.app.Activity;
@@ -30,7 +34,7 @@ import android.content.Context;
 import android.widget.TextView;
 
 public class AdditionalOrdersFragment extends Fragment{
-
+    private String LearningCaseFileName = "";
     ArrayList<String> m_LabListArray;
     ArrayList<String> m_PostSearchListArray;
     ArrayList<String> m_AddedOrdersArray;
@@ -39,6 +43,7 @@ public class AdditionalOrdersFragment extends Fragment{
     ArrayAdapter<String> addedListAdapter;
     ListView additionalOrderListView;
     ListView addedOrderListView;
+    ArrayList<String> requiredOrdersArray = new ArrayList<String>();
     @Override
    public View onCreateView(LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
@@ -100,6 +105,28 @@ public class AdditionalOrdersFragment extends Fragment{
                 onClickAddOrders(v);
             }
         });
+
+        Button removeButton = (Button) fragView.findViewById(R.id.remove_orders_button);
+        removeButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                onClickRemoveOrders(v);
+            }
+        });
+
+        Button proceedButton = (Button) fragView.findViewById(R.id.proceed_from_orders_button);
+        proceedButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                onClickProceed(v);
+            }
+        });
+
+
         // ListView Item Click Listener
    /*    listView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -142,6 +169,21 @@ public class AdditionalOrdersFragment extends Fragment{
        currentView.setText(ChiefComplaint);
        currentView = (TextView)fragView.findViewById(R.id.HistoryOfPresentIllnessTextView);
        currentView.setText(HistoryOfPresentIllness);*/
+        XmlPullParser parser = Xml.newPullParser();
+        try {
+            InputStream in_s = getActivity().getApplicationContext().getAssets().open(LearningCaseFileName);
+            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            parser.setInput(in_s, null);
+
+            parseXML(parser);
+
+        } catch (XmlPullParserException e) {
+
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
       return fragView;
    }
   //  private String LearningCaseFileName = "";
@@ -174,7 +216,7 @@ public class AdditionalOrdersFragment extends Fragment{
         String searchTerm = searchEditText.getText().toString();
         ArrayList newSearchList = new ArrayList<String>();
         for(int i = 0; i < m_LabListArray.size(); i++) {
-            if(m_LabListArray.get(i).contains(searchTerm)){
+            if(m_LabListArray.get(i).toLowerCase().contains(searchTerm.toLowerCase())){
                 newSearchList.add(m_LabListArray.get(i));
             }
         }
@@ -218,10 +260,130 @@ public class AdditionalOrdersFragment extends Fragment{
       //  listAdapter.addAll(m_PostSearchListArray);
         listAdapter.notifyDataSetChanged();
 }
-    /*public void setLearningCaseFileName(String lcfn) {
+
+    public void onClickRemoveOrders(View view){
+        SparseBooleanArray checked = addedOrderListView.getCheckedItemPositions();
+       // m_PostSearchListArray
+          //      m_AddedOrdersArray
+        ArrayList newPostSearchList = new ArrayList<String>(m_PostSearchListArray);
+        for(int i = 0; i < m_AddedOrdersArray.size(); i++) {
+            if(checked.get(i)) {
+                newPostSearchList.add(m_AddedOrdersArray.get(i));
+            }
+            //if(m_LabListArray.get(i).contains(searchTerm)){
+            //    newSearchList.add(m_LabListArray.get(i));
+            //}
+        }
+        additionalOrderListView.clearChoices();
+        listAdapter.clear();
+        listAdapter.addAll(newPostSearchList);
+        listAdapter.notifyDataSetChanged();
+
+        for(int j = m_AddedOrdersArray.size()-1; j>=0; j--) {
+            if(checked.get(j)) {
+                m_LabListArray.add(m_AddedOrdersArray.get(j));
+                m_AddedOrdersArray.remove(j);
+
+                //need to somehow remove this from master list as well, otherwise it will
+                //repopulate
+            }
+        }
+        addedOrderListView.clearChoices();
+        // additionalOrderListView.requestLayout();
+        //  listAdapter.clear();
+        //  listAdapter.addAll(m_PostSearchListArray);
+        addedListAdapter.notifyDataSetChanged();
+    }
+    //TODO Add check for extra orders that aren't needed and do something about it.
+    public void onClickProceed(View view){
+
+
+        String outputText = "Missing Orders: \n";
+        boolean missingItems = false;
+        for(int i = 0; i < requiredOrdersArray.size(); i++) {
+            boolean itemFound = false;
+            for(int j = 0; j< addedOrderListView.getAdapter().getCount(); j++) {
+                if (requiredOrdersArray.get(i).equalsIgnoreCase((String) addedOrderListView.getItemAtPosition(j))) {
+                    itemFound = true;
+                }
+            }
+            if(!itemFound){
+                outputText += requiredOrdersArray.get(i) + "\n";
+                missingItems = true;
+            }
+
+        }
+        if(missingItems){
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle("Missing Orders...");
+            builder.setMessage(outputText);
+            builder.setPositiveButton("OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+            //alertDialog.setIcon(R.drawable.icon);
+            AlertDialog alert11 = builder.create();
+            alert11.show();
+        } else {
+            LearningCasesActivity activity = (LearningCasesActivity)getActivity();
+            activity.beginDay1();
+        }
+    }
+
+    public void setLearningCaseFileName(String lcfn) {
         LearningCaseFileName = lcfn;
 
-    }*/
+    }
+
+    private void parseXML(XmlPullParser parser) throws XmlPullParserException,IOException
+    {
+        //ArrayList<product> products = null;
+        int eventType = parser.getEventType();
+        //Product currentProduct = null;
+
+        boolean withinAdditional = false;
+        boolean withinRequired = false;
+        String text = "";
+        // TODO:  Handle XML files that have errors
+
+        while (eventType != XmlPullParser.END_DOCUMENT){
+            String name = null;
+            switch (eventType){
+                case XmlPullParser.START_DOCUMENT:
+                    break;
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    if (name.equalsIgnoreCase("AdditionalOrders")) {
+                        withinAdditional = true;
+                    }
+                    if (withinAdditional && name.equalsIgnoreCase("Required")) {
+                        withinRequired = true;
+                    }
+
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    if(withinAdditional) {
+                        if (name.equalsIgnoreCase("Required")) {
+                            withinRequired = false;
+                            requiredOrdersArray.add(text);
+                        }
+                    }
+                    if(name.equalsIgnoreCase("Additional")){
+                        withinAdditional = false;
+
+                    }
+
+                    break;
+                case XmlPullParser.TEXT:
+                    text = parser.getText();
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
 
     //TODO   -  option to remove from added .
     //TODO   -  proceed to check if response are correct.

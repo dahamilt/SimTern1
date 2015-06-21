@@ -49,7 +49,7 @@ public class LearningCasesActivity extends ActionBarActivity  {
 	                           this, "Exams", ExamsFragment.class,LearningCaseFileName));
 	    actionBar.addTab(tab);
 	    
-	    tab = actionBar.newTab()
+/*	    tab = actionBar.newTab()
                 .setText("Labs")
                 .setTabListener(new TabListener<LabsFragment>(
                         this, "Labs", LabsFragment.class,LearningCaseFileName));
@@ -62,18 +62,18 @@ public class LearningCasesActivity extends ActionBarActivity  {
 		actionBar.addTab(tab);
 
         tab = actionBar.newTab()
-                .setText("Additional Orders")
+                .setText("More Orders")
                 .setTabListener(new TabListener<AdditionalOrdersFragment>(
                         this, "Additional Orders", AdditionalOrdersFragment.class,LearningCaseFileName));
-        actionBar.addTab(tab);
+        actionBar.addTab(tab); */
 	}
 
 	 @Override
 	  public void onRestoreInstanceState(Bundle savedInstanceState) {
-	    // Restore the previously serialized current tab position.
-	    if (savedInstanceState.containsKey(STATE_SELECTED_NAVIGATION_ITEM)) {
-	      getActionBar().setSelectedNavigationItem(savedInstanceState.getInt(STATE_SELECTED_NAVIGATION_ITEM));
-	    }
+             // Restore the previously serialized current tab position.
+             if (savedInstanceState.containsKey(STATE_SELECTED_NAVIGATION_ITEM)) {
+                 getActionBar().setSelectedNavigationItem(savedInstanceState.getInt(STATE_SELECTED_NAVIGATION_ITEM));
+             }
 	  }
 
 	  @Override
@@ -148,9 +148,15 @@ public class LearningCasesActivity extends ActionBarActivity  {
 		            	ExamsFragment tempExams = (ExamsFragment) mFragment;
 		            	tempExams.setLearningCaseFileName(learningCaseFileName);
 		             }else if(mFragment instanceof LabsFragment) {
-		            	 LabsFragment tempExams = (LabsFragment) mFragment;
-		            	tempExams.setLearningCaseFileName(learningCaseFileName);
-		            }
+		            	 LabsFragment tempLabs = (LabsFragment) mFragment;
+                        tempLabs.setLearningCaseFileName(learningCaseFileName);
+		            }else if(mFragment instanceof OrdersFragment) {
+                        OrdersFragment tempOrders = (OrdersFragment) mFragment;
+                        tempOrders.setLearningCaseFileName(learningCaseFileName);
+                    }else if(mFragment instanceof AdditionalOrdersFragment) {
+                        AdditionalOrdersFragment tempAddlOrders = (AdditionalOrdersFragment) mFragment;
+                        tempAddlOrders.setLearningCaseFileName(learningCaseFileName);
+                    }
 		           // }
 		           // if (mFragment.getClass().getName().equals("com.example.simtern1.HistoryFragment") //||
 		            		//mClass.getName() == "ExamsFragment" ||
@@ -183,10 +189,10 @@ public class LearningCasesActivity extends ActionBarActivity  {
 		    }
 
 		    public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		        if (mFragment != null) {
-		            // Detach the fragment, because another one is being attached
-		            ft.detach(mFragment);
-		        }
+                    if (mFragment != null) {
+                        // Detach the fragment, because another one is being attached
+                        ft.detach(mFragment);
+                    }
 		    }
 
 		    public void onTabReselected(Tab tab, FragmentTransaction ft) {
@@ -196,10 +202,39 @@ public class LearningCasesActivity extends ActionBarActivity  {
 		}
 	public void activateLabsTab() {
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        android.support.v7.app.ActionBar.Tab tab1 = actionBar.newTab();
+        tab1 = actionBar.newTab()
+                .setText("Labs")
+                .setTabListener(new TabListener<LabsFragment>(
+                        this, "Labs", LabsFragment.class,LearningCaseFileName));
+        actionBar.addTab(tab1);
+
 		android.support.v7.app.ActionBar.Tab tab = actionBar.newTab()
         .setText("Orders")
         .setTabListener(new TabListener<OrdersFragment>(
                 this, "Orders", OrdersFragment.class,LearningCaseFileName));
 		actionBar.addTab(tab);
-	}
+    }
+
+    public void activateAdditionalTab() {
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        android.support.v7.app.ActionBar.Tab tab = actionBar.newTab();
+        tab = actionBar.newTab()
+                .setText("More Orders")
+                .setTabListener(new TabListener<AdditionalOrdersFragment>(
+                        this, "Additional Orders", AdditionalOrdersFragment.class,LearningCaseFileName));
+        actionBar.addTab(tab);
+
+
+    }
+
+    public void beginDay1() {
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.removeAllTabs();
+        android.support.v7.app.ActionBar.Tab tab = actionBar.newTab()
+                .setText("Day 1 - 7AM")
+                .setTabListener(new TabListener<NextDayFragment>(
+                        this, "Day 1 - 7AM", NextDayFragment.class,LearningCaseFileName));
+        actionBar.addTab(tab);
+    }
 }

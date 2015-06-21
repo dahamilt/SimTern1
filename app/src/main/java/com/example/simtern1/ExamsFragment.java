@@ -40,6 +40,7 @@ public class ExamsFragment extends Fragment{
 	private HashMap<String,Boolean> requiredExams =new HashMap<String, Boolean>();
 	boolean correctSelections = false; 
 	private SparseBooleanArray finalExamsSelection = new SparseBooleanArray();
+    ListView listview;
    @Override
 
    public View onCreateView(LayoutInflater inflater,
@@ -65,7 +66,7 @@ public class ExamsFragment extends Fragment{
 				e.printStackTrace();
 		}
 			
-	    final ListView listview = (ListView) fragView.findViewById(R.id.exams_selection_listview);
+	    listview = (ListView) fragView.findViewById(R.id.exams_selection_listview);
 	    String[] values = new String[] { "General", "HEENT", "Cardiovascular",
 	        "Respiratory", "Abdomen", "Genitourinary", "Extremities", "Back",
 	        "Skin", "Neurological" };
@@ -269,7 +270,8 @@ public class ExamsFragment extends Fragment{
    }
    
    private void switchToNextTab() {
-	   int tab =2; //or any number
+	   int tab =2;
+       listview.setEnabled(false);
 	   LearningCasesActivity activity = (LearningCasesActivity)getActivity();  
 	   activity.activateLabsTab();
 	   activity.getActionBar().setSelectedNavigationItem(tab);
